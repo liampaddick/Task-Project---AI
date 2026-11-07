@@ -71,7 +71,7 @@ As this is a short time window, the following considerations and actions were ma
 - Kicked Claude code off, telling it to use the Claude.md file and agents to produce an initial coverage of the sauce demo website. This hung on the first run for 20 minutes. Interrupting Claude and retrying produced a successful flow, resulting in tests being created for multiple scenarios.
 - Scenarios recommended to Claude were in the Claude.md file but it was given free reign to create more, it did.
 - Even after the second attempt, Claude was unable to create a test suite that worked completely, the download PDF test fails due to the remote connection it perceives and therefore download.path does not pick up the file.
-- The AI appears to have taken the Claude.md too literally in parts, it could have used a different approach to multiple items being added to the cart (As seen in handwritten task) to allow for that type of test to be more flexible, rather than calling the same method multiple times with a new item each time.
+- The AI appears to have taken the Claude.md too literally in parts, specifically around not overcomplicating for the sake of it. For example, it could have used a different approach to multiple items being added to the cart (As seen in handwritten task) to allow for that type of test to be more flexible, rather than calling the same method multiple times with a new item each time. This is an example of where specifics and examples as well as review processes can improve the output.
 
 **Future Changes**
 - The Claude.md file could be updated to test for timeouts, hangs or loops so that agents don't get stuck and achieve nothing.
@@ -95,3 +95,7 @@ As this is a short time window, the following considerations and actions were ma
 - npm scripts, linting/formatting, and a CI tag split (e.g. `@smoke` vs `@regression`)
 - Move the login step to a cached `storageState` if the suite grows
 - Visual and accessibility checks
+
+## Link to Handwritten Variant
+- https://github.com/liampaddick/Task-Project
+
